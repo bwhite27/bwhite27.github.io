@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    
+        <link rel="stylesheet" href="../Styles/ta.css">
+    
+	<meta charset="utf-8">
+    <title>Teaching Assistant Application</title>
+    <style>
+    	* {
+    		margin: 0;
+    		padding: 0;
+    	}
+		body {
+		    margin: 20px auto;
+		    padding: 10px;
+		    border: 2px solid black;
+		}
+		h1 {
+			color: black; 
+			font-size: 140%;
+		}
+		h2 {
+			font-size: 115%;
+			padding: .5em 0;
+		}
+		label {
+			color: black;
+			float: left;
+			width: 8em;
+			font-weight: bold;
+			text-align: left;
+		}
+		input {
+			width: 15em;
+			margin: 0 0 .5em 1em;
+            margin-left: 1em;
+            margin-bottom:.5em;
+		}
+        [type=checkbox]{
+            width: 20px;
+            margin-left: 1em
+            background-color: silver;
+        }
+		#button, #reset {
+			width: 7em;
+			background-color: silver;
+			box-shadow: 2px 2px 0 #f24f00; }
+		#button {
+			margin-left: 9em;
+		}
+	</style>
+</head>
+    
+    <header>
+    <img src = "../Pics/header.jpg">
+    <h1>AUM Computer Science</h1>
+</header>
+    
+     <div class="navbar">
+  <a href="../index.html">Home</a>
+  <a href="descriptions.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Extras
+      <i class="Drop it"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="http://sciences.aum.edu/departments/math-and-computer-science" target="_blank">Student Resources</a>
+      <a href="http://sciences.aum.edu/departments/math-and-computer-science/scholarships" target="_blank">Scholarships</a>
+      <a href="http://www.aum.edu/" target="_blank">AUM Home</a>
+    </div>
+    </div>
+        <a href="GPA.html">GPA Calculator</a>
+    </div>
+
+<body>
+<h1>Please complete this form</h1>
+<form name="myform" action="survey_data.html" method="get">
+	
+	<h2>Contact information</h2>
+	<label for="email">Email address:</label>
+    <input type="email" name="email" id="email"><br>
+    <label for="firstname">First name:</label>
+    <input type="text" name="firstname" id="firstname"><br>
+    <label for="lastname">Last name:</label>
+    <input type="text" name="lastname" id="lastname"><br>
+    <label for="sNum">S Number:</label>
+    <input type="text" name="sNum" id="sNum"><br>
+    
+    <h2>Student information</h2>
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="gender" maxlength="1" placeholder="One Character"><br>
+    <label for "GPA">GPA:</label>
+    <input type="GPA" name="GPA" id="GPA" maxlength="4" placeholder="Three digits"><br> <br>
+    <label for "date">Submission Date:</label>
+    <input type="date" name="date" id="date" maxlength="8" placeholder="MM/DD/YYYY"><br><br>
+    <label for "comment">Comments:</label>
+    <input type="comment" name="comment" id="comment" placeholder=":)"><br><br>
+    
+    <h2>How did you hear about us?</h2>
+    <label for="wsearch">Web Search:</label>
+    <input type="checkbox" name="wsearch" value="wsearch"><br>
+    <label for="fbook">Facebook:</label>
+    <input type="checkbox" name="fbook" value="fbook"><br>
+    <label for="twitter">Twitter:</label>
+    <input type="checkbox" name="twitter" value="twitter"><br>
+    <label for="emailmsg">Email message:</label>
+    <input type="checkbox" name="emailmsg" value="emailmsg"><br>
+    
+    
+    <h2>Thank you for applying!</h2>
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset"> 
+</form>
+</body>
+    
+    <footer>&copy; 2020 Brian White <br> bwhite27@aum.edu</footer>
+    
+</html>

@@ -1,12 +1,13 @@
 html{
   font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../images/bats.gif");
     padding-left: 30px;
+   background-image: url("../Pics/background.jpg");
 }
 
 header{
-    background-image: linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: linear-gradient(45deg, white 0%, #f24f00 75%, black 100%);
     border-bottom: 5px solid black;
+    text-align: center;
 }
 
 body {
@@ -21,8 +22,9 @@ body {
 
 footer{
     font-size: 80%;
+    color: white;
     text-align: center;
-    background-image: linear-gradient(45deg, black 0%, orange 75%, white 100%);
+    background-image: linear-gradient(45deg, black 0%, #f24f00 75%, white 100%);
     border-top: 5px solid black;
     padding: 25px;
 }
@@ -33,13 +35,18 @@ footer{
 
 header img{
     float: left;
-    padding-right: 15px;
+    padding-right: 1px;
     padding-bottom: 5px;
+    width: 100px;
+    height: 50px;
 }
 
+h2::first-letter{
+    font-size: 200%;    
+}
 
 a:link{
-    color: darkorange;
+    color: #f24f00;
 }
 
 a:hover{
@@ -49,7 +56,7 @@ a:hover{
 .sidenav {
     height:auto;
     width:10em;
-    position: fixed;
+    position: absolute;
     z-index:1;
     top:11.5em;
     margin-top:0em;
@@ -58,39 +65,15 @@ a:hover{
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 15px 6px;
   text-decoration: none;
   font-size: 100%;
-  color: darkorange;
+  color: #f24f00;
   display: block;
-}
-
-.sidenav1 {
-    height:auto;
-    width:10em;
-    position: fixed;
-    z-index:1;
-    right: 0em;
-    top:11.5em;
-    margin-top:0em;
-    overflow-x: hidden;
-    padding-top:0em;
-    background-color: #f5deb3;
-    padding-right: 5em;
-    margin-right: 4em;
-}
-
-.sidenav1 a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: underline;
-  font-size: 100%;
-  color: black;
-  display: block;
-    padding-left: 10px;
 }
 
 .main {
-  padding-left: 10em;
+  padding-left: 10.5em;
     padding-right: 8em;
 }
 
@@ -125,7 +108,7 @@ a:hover{
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: darkorange;
+  background-color: #f24f00;
 }
 
 .dropdown-content {
@@ -147,7 +130,7 @@ a:hover{
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #f24f00;
 }
 
 .dropdown:hover .dropdown-content {
@@ -155,10 +138,12 @@ a:hover{
 }
 
 .button {
-  background-color: darkorange;
+  background-color: #f24f00;
+    position: ;
   border: solid black;
   color: black;
-    width: 130px;
+    width: 150px;
+    overflow: hidden;
   padding: 1px 3px;
   text-align: center;
   text-decoration: none;
@@ -166,4 +151,11 @@ a:hover{
   font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.center {
+  display: block;
+  margin-left: 1px;
+  margin-right: 15px;
+    width: 600px;
 }

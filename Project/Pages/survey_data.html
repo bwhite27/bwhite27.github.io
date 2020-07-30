@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../Styles/home.css">
+<title>Application Data</title>
+<style>
+    
+    body {
+    	width: 800px;
+    	margin: 0 auto;
+    	padding: 0 30px;
+    	border: 2px solid black;
+    }
+    dt {
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+    
+    <header>
+    <img src = "../Pics/header.jpg">
+    <h1>AUM Computer Science</h1>
+</header>
+
+<body>
+        <div class="navbar">
+  <a href="../index.html">Home</a>
+  <a href="descriptions.html">About Us</a>
+        <a href="TA.html">TA Application</a>
+  <div class="dropdown">
+    <button class="dropbtn">Extras 
+      <i class="Drop it"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="http://sciences.aum.edu/departments/math-and-computer-science" target="_blank">Student Resources</a>
+      <a href="http://sciences.aum.edu/departments/math-and-computer-science/scholarships" target="_blank">Scholarships</a>
+      <a href="http://www.aum.edu/" target="_blank">AUM Home</a>
+    </div>
+    </div>
+        <a href="GPA.html">GPA Calculator</a>
+    </div>
+    
+    <h1>Application Data</h1>
+    <script>display_data();</script>
+</body>
+    
+    <footer>&copy; 2020 Brian White <br> bwhite27@aum.edu</footer>
+    
+</html>
